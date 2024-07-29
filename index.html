@@ -13,9 +13,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@546&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <title>Ordenar imágenes</title>
+    <title>SEMISECUEN- JI Nº906 - 3DF</title>
     <style>
-        body {
+body {
     font-family: 'Grandstander', sans-serif;
     text-align: center;
     margin: 0;
@@ -47,7 +47,8 @@
     padding-top: 60px; /* Ajusta el padding superior para no cubrir el contenido con la navbar */
 }
 
-#imageContainer {
+#imageContainer,
+#order {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Crear una fila con 4 columnas */
     gap: 10px; /* Espacio entre las imágenes */
@@ -55,26 +56,11 @@
     width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
-.image-container img {
+.image-container img,
+#order img {
     width: 100%; /* Ajusta las imágenes al tamaño de la columna */
     height: auto;
-    cursor: pointer;
-    border-radius: 8px;
-}
-
-#order {
-    margin-top: 20px;
-    font-size: 20px;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#order img {
-    width: 250px; /* Tamaño fijo para las imágenes ordenadas */
-    height: auto;
-    margin: 5px;
+    object-fit: cover; /* Asegura que las imágenes llenen el espacio disponible sin distorsionarse */
     border-radius: 8px;
 }
 
@@ -184,11 +170,7 @@
     background-color: #7c4200;
 }
 
-@media (max-width: 768px) {
-    #order img {
-        width: 80px;
-    }
-}
+
 
     </style>
 </head>
@@ -203,7 +185,7 @@
     </nav>
 
     <div class="start-screen" id="startScreen">
-        <img src="./SemiSecuen.jpg" alt="Inicio"   >
+        <img src="./SemiSecuen.jpg" alt="Inicio">
         <button type="button" id="startButton">JUGAR</button>
     </div>
 
@@ -256,7 +238,7 @@
                     errorAlert.textContent = 'Imagen incorrecta. Inténtalo de nuevo.'; // Mostrar mensaje de error
                     errorAlert.style.display = 'block'; // Mostrar alerta de error
                     setTimeout(() => {
-                        errorAlert.style.display = 'none'; // Ocultar alerta después de 3 segundos
+                        errorAlert.style.display = 'none'; // Ocultar alerta después de 2 segundos
                     }, 2000);
                 }
             }
