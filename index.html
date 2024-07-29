@@ -15,163 +15,193 @@
         rel="stylesheet">
     <title>SEMISECUEN- JI Nº906 - 3DF</title>
     <style>
-body {
-    font-family: 'Grandstander', sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        body {
+            font-family: 'Grandstander', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            /* Añadir display flex */
+            align-items: center;
+            /* Centrar verticalmente */
+            justify-content: center;
+            /* Centrar horizontalmente */
+            min-height: 100vh;
+            /* Asegurar que el body ocupe toda la altura de la ventana */
+        }
 
-.navbar {
-    position: fixed; /* Fijar la barra de navegación en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Asegúrate de que la barra de navegación esté sobre otros elementos */
-    background-color: #1D1D1B; /* Ajusta el color de fondo de la barra de navegación */
-    padding: 10px 0; /* Ajusta el padding según sea necesario */
-}
-
-.navbar img {
-    width: 30%; /* Ajusta el tamaño del logo */
-    height: auto;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    padding-top: 60px; /* Ajusta el padding superior para no cubrir el contenido con la navbar */
-}
-
-#imageContainer,
-#order {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Crear una fila con 4 columnas */
-    gap: 10px; /* Espacio entre las imágenes */
-    justify-content: center; /* Centrar las columnas horizontalmente */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-}
-
-.image-container img,
-#order img {
-    width: 100%; /* Ajusta las imágenes al tamaño de la columna */
-    height: auto;
-    object-fit: cover; /* Asegura que las imágenes llenen el espacio disponible sin distorsionarse */
-    border-radius: 8px;
-}
-
-.grayscale {
-    filter: grayscale(100%);
-}
-
-.alert-danger,
-.alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    padding: 15px;
-    margin: 20px 0;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    display: none;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-}
-
-.alert-danger {
-    color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
-}
-
-.alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-}
-
-.end-screen {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 80%;
-    max-width: 600px;
-    z-index: 999; /* Asegúrate de que la pantalla final esté por encima del contenido principal */
-}
-
-.end-screen button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #006110;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Grandstander', sans-serif;
-}
-
-.end-screen button:hover {
-    background-color: #7c4200;
-}
-
-.start-screen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
-    z-index: 999; /* Asegúrate de que la pantalla de inicio esté sobre el contenido principal */
-}
-
-.start-screen img {
-    width: 80%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 8px;
-}
-
-.start-screen button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #006110;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Grandstander', sans-serif;
-}
-
-.start-screen button:hover {
-    background-color: #7c4200;
-}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            overflow: hidden;
+            padding-top: 60px;
+            /* Ajustar para no cubrir con la navbar */
+            box-sizing: border-box;
+            /* Incluir padding en el cálculo del ancho */
+        }
 
 
+        .navbar {
+            position: fixed;
+            /* Fijar la barra de navegación en la parte superior */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            /* Asegúrate de que la barra de navegación esté sobre otros elementos */
+            background-color: #1D1D1B;
+            /* Ajusta el color de fondo de la barra de navegación */
+            padding: 10px 0;
+            /* Ajusta el padding según sea necesario */
+        }
 
+        .navbar img {
+            width: 30%;
+            /* Ajusta el tamaño del logo */
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            padding-top: 60px;
+            /* Ajusta el padding superior para no cubrir el contenido con la navbar */
+        }
+
+        #imageContainer,
+        #order {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* Crear una fila con 4 columnas */
+            gap: 10px;
+            /* Espacio entre las imágenes */
+            justify-content: center;
+            /* Centrar las columnas horizontalmente */
+            width: 100%;
+            /* Asegura que el contenedor ocupe todo el ancho disponible */
+        }
+
+        .image-container img,
+        #order img {
+            width: 100%;
+            /* Ajusta las imágenes al tamaño de la columna */
+            height: auto;
+            object-fit: cover;
+            /* Asegura que las imágenes llenen el espacio disponible sin distorsionarse */
+            border-radius: 8px;
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .alert-danger,
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            display: none;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .end-screen {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            z-index: 999;
+            /* Asegúrate de que la pantalla final esté por encima del contenido principal */
+        }
+
+        .end-screen button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #006110;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Grandstander', sans-serif;
+        }
+
+        .end-screen button:hover {
+            background-color: #7c4200;
+        }
+
+        .start-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            z-index: 999;
+            /* Asegúrate de que la pantalla de inicio esté sobre el contenido principal */
+        }
+
+        .start-screen img {
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .start-screen button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #006110;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-family: 'Grandstander', sans-serif;
+        }
+
+        .start-screen button:hover {
+            background-color: #7c4200;
+        }
     </style>
 </head>
 
