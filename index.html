@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@546&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@546&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Ordenar imágenes</title>
+    <style>
+        body {
+            font-family: 'Grandstander';
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            position: fixed; /* Fijar la barra de navegación en la parte superior */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Asegúrate de que la barra de navegación esté sobre otros elementos */
+            background-color: #1D1D1B; /* Ajusta el color de fondo de la barra de navegación */
+            padding: 10px 0; /* Ajusta el padding según sea necesario */
+        }
+
+        .navbar img {
+            width: 30%; /* Ajusta el tamaño del logo */
+            height: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            padding-top: 60px; /* Ajusta el padding superior para no cubrir el contenido con la navbar */
+        }
+
+        #imageContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .image-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        #order {
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #order img {
+            display: block;
+            width: 250px;
+            height: auto;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        .grayscale {
+            filter: grayscale(100%);
+        }
+
+        .alert-danger,
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            display: none;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .end-screen {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+            z-index: 999; /* Asegúrate de que la pantalla final esté por encima del contenido principal */
+        }
+
+        .end-screen button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #006110;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .end-screen button:hover {
+            background-color: #7c4200;
+        }
+
+        .start-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            z-index: 999; /* Asegúrate de que la pantalla de inicio esté sobre el contenido principal */
+        }
+
+        .start-screen img {
+            width: 80%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .start-screen button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #006110;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-screen button:hover {
+            background-color: #7c4200;
+        }
+
+        @media (max-width: 768px) {
+            #order img {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="./JI906.png" alt="Logo">
+            </a>
+        </div>
+    </nav>
+
+    <div class="start-screen" id="startScreen">
+        <img src="./SemiSecuen.jpg" alt="Inicio">
+        <button type="button" id="startButton">Comenzar Juego</button>
+    </div>
+
+    <div class="container">
+        <h1>ORDENAR LA SECUENCIA</h1>
+        <div id="imageContainer"></div>
+        <h1>SECUENCIA ORDENADA</h1>
+        <div id="order"></div>
+
+        <div class="alert alert-danger" id="errorAlert" role="alert"></div>
+        <div class="end-screen" id="endScreen">
+            <h2 id="endMessage"></h2>
+            <button type="button" id="restartButton">Reiniciar Juego</button>
+        </div>
+    </div>
+
+    <script>
+        const correctOrder = [1, 2, 3, 4];
+        let shuffledOrder = shuffleArray([...correctOrder]);
+        let currentIndex = 0;
+        let selectedOrder = new Set(); // Usar un Set para almacenar las selecciones
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function selectImage(index) {
+            const endScreen = document.getElementById('endScreen');
+            const endMessage = document.getElementById('endMessage');
+            const errorAlert = document.getElementById('errorAlert');
+
+            if (index === correctOrder[currentIndex]) {
+                selectedOrder.add(index); // Usar add() para almacenar en el Set
+                currentIndex++;
+                updateOrderDisplay();
+                updateImageStyles(); // Actualizar estilos de imágenes
+                if (currentIndex === correctOrder.length) {
+                    endMessage.textContent = '¡Ganaste!';
+                    endScreen.style.display = 'block'; // Mostrar pantalla final con mensaje de éxito
+                }
+            } else {
+                if (selectedOrder.size === correctOrder.length) {
+                    endMessage.textContent = 'Perdiste. Intenta nuevamente.';
+                    endScreen.style.display = 'block'; // Mostrar pantalla final con mensaje de error
+                } else {
+                    errorAlert.textContent = 'Imagen incorrecta. Inténtalo de nuevo.'; // Mostrar mensaje de error
+                    errorAlert.style.display = 'block'; // Mostrar alerta de error
+                    setTimeout(() => {
+                        errorAlert.style.display = 'none'; // Ocultar alerta después de 3 segundos
+                    }, 2000);
+                }
+            }
+
+            // Forzar el scroll para asegurar que el contenedor se ajuste correctamente a la pantalla
+            const imageContainer = document.getElementById('imageContainer');
+            imageContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function updateOrderDisplay() {
+            const orderContainer = document.getElementById('order');
+            orderContainer.innerHTML = "";
+            selectedOrder.forEach(id => {
+                const img = document.createElement('img');
+                img.src = `./${id}.jpg`;
+                img.alt = `Imagen ${id}`;
+                orderContainer.appendChild(img);
+            });
+        }
+
+        function updateImageStyles() {
+            const images = document.querySelectorAll('#imageContainer img');
+            images.forEach(img => {
+                const imgId = parseInt(img.src.match(/\/(\d+)\.jpg$/)[1]);
+                if (selectedOrder.has(imgId)) {
+                    img.classList.add('grayscale');
+                } else {
+                    img.classList.remove('grayscale');
+                }
+            });
+        }
+
+        function initializeGame() {
+            shuffledOrder = shuffleArray([...correctOrder]);
+            currentIndex = 0;
+            selectedOrder.clear(); // Limpiar el conjunto de selección
+
+            // Limpiar los contenedores de imágenes y orden
+            document.getElementById('imageContainer').innerHTML = "";
+            document.getElementById('order').innerHTML = "";
+            document.getElementById('endScreen').style.display = 'none'; // Ocultar pantalla final
+            document.getElementById('errorAlert').style.display = 'none'; // Ocultar alerta de error
+
+            // Volver a agregar las imágenes a la cuadrícula
+            shuffledOrder.forEach(id => {
+                const div = document.createElement('div');
+                div.className = 'image-container';
+                const img = document.createElement('img');
+                img.src = `./${id}.jpg`;
+                img.alt = `Imagen ${id}`;
+                img.addEventListener('click', () => selectImage(id));
+                div.appendChild(img);
+                document.getElementById('imageContainer').appendChild(div);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            initializeGame();
+
+            const restartButton = document.getElementById('restartButton');
+            restartButton.addEventListener('click', initializeGame);
+
+            const startButton = document.getElementById('startButton');
+            startButton.addEventListener('click', () => {
+                document.getElementById('startScreen').style.display = 'none';
+                document.querySelector('.container').style.display = 'block'; // Mostrar la sección del juego
+            });
+        });
+    </script>
+</body>
+
+</html>
