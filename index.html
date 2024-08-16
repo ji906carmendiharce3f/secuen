@@ -124,7 +124,7 @@
             <div class="row">
                 <h1>INSTRUCCIONES</h1>
                 <p>Tocá las imágenes para sumar puntos, pero cuidado, hay imágenes que restan un punto.</p>
-                <p>Tenes 10 segundos para conseguir más de 5 puntos para ganar.</p>
+                <p>Tenes 15 segundos para conseguir más de 5 puntos para ganar.</p>
                 <br>
                 <button id="start-btn">JUGAR</button>
             </div>
@@ -135,7 +135,7 @@
     <!-- Juego -->
     <div id="game">
         <div id="header-bar">
-            <div id="timer">TIEMPO: 10s</div>
+            <div id="timer">TIEMPO: 15s</div>
             <div id="score">PUNTOS: 0</div>
         </div>
         <div id="alert-container" class="alert alert-warning" role="alert"></div>
@@ -168,7 +168,7 @@
 
             let score = 0;
             const pointsRequiredToWin = 5;
-            let gameDuration = 10;
+            let gameDuration = 15;
             let timer;
             let imageTimeout;
             let images = Array.from({ length: 10 }, (_, i) => i + 1); // 10 imágenes
@@ -239,12 +239,12 @@
                     } else if (imagesShown.size >= 10) { // Verificar si todas las imágenes se han mostrado
                         endGame(score >= pointsRequiredToWin);
                     }
-                }, 1000); // Cada imagen se muestra durante 1 segundo
+                }, 2000); // Cada imagen se muestra durante 1 segundo
             }
 
             function startGame() {
                 score = 0;
-                gameDuration = 10;
+                gameDuration = 15;
                 images = Array.from({ length: 10 }, (_, i) => i + 1); // Reiniciar el arreglo de imágenes
                 imagesShown.clear(); // Limpiar el conjunto de imágenes mostradas
                 imagesClicked = 0;
@@ -263,7 +263,7 @@
                     if (gameDuration <= 0) {
                         endGame(score >= pointsRequiredToWin);
                     }
-                }, 1000);
+                }, 3000);
 
                 createImage();
             }

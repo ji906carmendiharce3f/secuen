@@ -99,7 +99,7 @@ img {
 }
 
 
-/* Estilos básicos para las alertas */
+
 .alert {
     padding: 15px;
     border-radius: 5px;
@@ -110,21 +110,21 @@ img {
     box-sizing: border-box;
 }
 
-/* Estilo para alertas de éxito */
+
 .alert-success {
     color: #155724;
     background-color: #d4edda;
     border-color: #c3e6cb;
 }
 
-/* Estilo para alertas de advertencia */
+
 .alert-warning {
     color: #856404;
     background-color: #fff3cd;
     border-color: #ffeeba;
 }
 
-/* Estilo para ocultar las alertas */
+
 .alert-hidden {
     display: none;
 }
@@ -137,18 +137,17 @@ img {
 }
 
 
-
 #header-bar #score {
     flex: 1;
     color: rgb(255, 255, 255);
-    /*padding: 1%;*/
+  
 }
 
 #header-bar #timer {
     flex: 1;
     text-align: center;
     color: red;
-   /* padding: 1%;*/
+ 
 }
 
 #header-bar #points-required {
