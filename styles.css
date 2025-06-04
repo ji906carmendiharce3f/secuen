@@ -1,232 +1,148 @@
-.grandstander {
-    font-family: "Grandstander", cursive;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+.navbar .navbar-expand-lg li a {
+  color: white;
 }
 
-.englebert-regular {
-    font-family: "Englebert", cursive;
-    font-weight: 400;
-    font-style: normal;
+.jumbotron {
+  background-position: center;
+  text-align: center;
+  /**height: 200px;*/
+  color: black;
+  font-family: 'Roboto';
 }
 
-.rubik {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+.titulo-articulo-index {
+  text-align: center;
+  font-family: 'League Spartan';
+  font-size: large;
+  color: black;
 }
 
-.delius-unicase-regular {
-    font-family: "Delius Unicase", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.delius-unicase-bold {
-    font-family: "Delius Unicase", cursive;
-    font-weight: 700;
-    font-style: normal;
-}
-
-body {
-    font-family: "Grandstander", cursive;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: white;
-}
-
-#instructions {
-    text-align: center;
-    font-family: "Rubik", sans-serif;
-}
-
-#instructions h1 {
-    margin-bottom: 50px;
-}
-
-#instructions p {
-    margin-bottom: 10px;
-}
-
-#instructions #start-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #006110;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Grandstander', sans-serif;
-}
-
-#score,
-#timer {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    font-family: "Grandstander", cursive;
-}
-
-#image-container {
-    position: relative;
-    width: 100%;
-    height: 500px;
-}
-
-img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-}
-
-#restart-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    background-color: #006110;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-family: 'Grandstander', sans-serif;
+.card {
+  text-align: center;
+  font-family: 'Roboto';
+  font-size: medium;
+  color: #1D1D1B;
 
 }
 
 
+.titulo-articulo-index {
+  margin: 2%;
+}
 
-.alert {
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    font-family: "Englebert", cursive;
-    width: 100%;
-    box-sizing: border-box;
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
 }
 
 
-.alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+.league-spartan {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 555;
+  font-style: normal;
 }
 
 
-.alert-warning {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
+
+
+/* Estilo para la columna que contiene los videos */
+.col {
+  display: flex;
+  /* Utiliza Flexbox para el layout */
+  flex-direction: column;
+  /* Organiza los videos en una columna */
+  height: 100%;
+  /* Ocupa toda la altura del header */
 }
 
-
-.alert-hidden {
-    display: none;
+/* Estilo para cada fila que contiene un video */
+.row {
+  flex: 1;
+  /* Permite que las filas crezcan y se ajusten igualmente */
+  display: flex;
+  /* Utiliza Flexbox para centrar el contenido */
+  justify-content: center;
+  /* Centra el video horizontalmente */
+  align-items: center;
+  /* Centra el video verticalmente */
+  overflow: hidden;
+  /* Oculta el contenido que se sale del contenedor */
 }
 
-
-#header-bar div {
-    font-size: 30px;
-    font-family: "Grandstander", cursive;
-    color: #0e0c0c;
-}
-
-
-#header-bar #score {
-    flex: 1;
-    color: rgb(255, 255, 255);
-  
-}
-
-#header-bar #timer {
-    flex: 1;
-    text-align: center;
-    color: red;
- 
-}
-
-#header-bar #points-required {
-    flex: 1;
-    text-align: center;
-}
-
-#header-bar #positive-points {
-    flex: 1;
-    text-align: right;
-}
-
-.alert {
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    font-family: "Englebert", cursive;
-    width: 90%;
-    max-width: 600px;
-    box-sizing: border-box;
-}
-
-.alert-success {
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-}
-
-.alert-warning {
-    color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba;
-}
-
-.alert-hidden {
-    display: none;
-}
-
-
-#game {
-    position: relative;
-    height: 100vh;
-    font-family: "Englebert", cursive;
-}
-
-#header-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #dee2e6;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-    position: relative;
-    font-family: "Englebert", cursive;
-}
-
-#restart-btn {
-
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-}
-
-
-#alert-container {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px;
-    font-size: 18px;
-    text-align: center;
-    max-width: 90%;
-    box-sizing: border-box;
-
+/* Estilo para los videos */
+video {
+  max-width: 100%;
+  /* Limita el ancho máximo del video al ancho del contenedor */
+  max-height: 100%;
+  /* Limita la altura máxima del video a la altura del contenedor */
+  object-fit: contain;
+  /* Ajusta el video para que se ajuste dentro del contenedor sin distorsión */
 }
