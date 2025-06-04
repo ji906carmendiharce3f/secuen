@@ -1,0 +1,148 @@
+.navbar.navbar-expand-lg li a {
+    color: white;
+  }
+  
+  .jumbotron {
+    background-position: center;
+    text-align: center;
+    height: 200px;
+    color: #1D1D1B;
+    font-family:'Roboto';
+  }
+  
+  .titulo-articulo-index {
+    text-align: center;
+    font-family: 'League Spartan';
+    font-size:large;
+    color: #1D1D1B;
+  }
+  
+  .card {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: medium;
+    color: #1D1D1B;
+    
+  }
+  body {
+    overflow-x: hidden;
+}
+  
+  
+  .titulo-articulo-index{
+    margin: 2%;
+  }
+  .roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  
+  .league-spartan {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 555;
+    font-style: normal;
+  }
+  
+  
+/* Estilo para la columna que contiene los videos */
+.col {
+  display: flex;
+  /* Utiliza Flexbox para el layout */
+  flex-direction: column;
+  /* Organiza los videos en una columna */
+  height: 100%;
+  /* Ocupa toda la altura del header */
+}
+
+/* Estilo para cada fila que contiene un video */
+.row {
+  flex: 1;
+  /* Permite que las filas crezcan y se ajusten igualmente */
+  display: flex;
+  /* Utiliza Flexbox para centrar el contenido */
+  justify-content: center;
+  /* Centra el video horizontalmente */
+  align-items: center;
+  /* Centra el video verticalmente */
+  overflow: hidden;
+  /* Oculta el contenido que se sale del contenedor */
+}
+
+/* Estilo para los videos */
+video {
+  max-width: 100%;
+  /* Limita el ancho máximo del video al ancho del contenedor */
+  max-height: 100%;
+  /* Limita la altura máxima del video a la altura del contenedor */
+  object-fit: contain;
+  /* Ajusta el video para que se ajuste dentro del contenedor sin distorsión */
+}
