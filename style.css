@@ -113,6 +113,19 @@
     font-style: normal;
   }
   
+  .dynapuff-550 {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+  font-family: "DynaPuff";
+}
+
   
 /* Estilo para la columna que contiene los videos */
 .col {
