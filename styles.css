@@ -146,3 +146,51 @@ video {
   object-fit: contain;
   /* Ajusta el video para que se ajuste dentro del contenedor sin distorsión */
 }
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Encabezado */
+header {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Sección de cada episodio */
+section.episode {
+  background-color: #ffffff;
+  margin-bottom: 25px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section.episode h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+section.episode p {
+  font-size: 1em;
+  color: #333;
+}
+
+/* Reproductor de audio */
+audio {
+  width: 100%;
+  margin-top: 15px;
+}
