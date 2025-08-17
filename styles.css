@@ -148,17 +148,12 @@ header {
 }
 
 
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
+#podcast-container {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
 }
 
-.container {
-  width: 100%;
-  margin: 20px 0;
-  padding: 0 20px;
-}
 
 section.episode {
   background-color: #fa931d;
