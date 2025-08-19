@@ -178,7 +178,7 @@ audio {
   width: 100%;
   margin-top: 15px;
   height: 50px;
-   transform: scaleY(1.5); /* Aumenta la altura 1.5x */
+   transform: scaleY(4.5); /* Aumenta la altura 1.5x */
 }
 audio::-internal-media-controls-download-button {
     display: none;
