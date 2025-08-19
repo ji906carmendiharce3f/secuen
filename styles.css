@@ -147,34 +147,30 @@ header {
   text-align: center;
 }
 
+
 #podcast-container {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0%;
+  padding: 0%;
 }
 
-.logo {
-  width: 100%;
-  border-radius: 10px;
-}
 
 section.episode {
   background-color: #fa931d;
   margin-bottom: 25px;
-  padding: 15px;
+  padding: 1px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
 }
 
 section.episode h2 {
-  font-size: 1.6em;
+  margin-top: 1%;
+  font-size: 1.5em;
   color: #ffffff;
-  margin-top: 0.5em;
 }
 
 section.episode p {
-  font-size: 1.1em;
+  font-size: 1em;
   color: #522b00;
 }
 
@@ -182,38 +178,14 @@ audio {
   width: 100%;
   margin-top: 15px;
 }
-
-/* Ocultar botón de descarga en navegadores WebKit */
 audio::-internal-media-controls-download-button {
-  display: none;
+    display: none;
 }
 
 audio::-webkit-media-controls-enclosure {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 audio::-webkit-media-controls-panel {
-  width: calc(100% - 30px); /* Ajustable si se corta algo */
-}
-
-/* --------------------- */
-/* 🎯 Estilos responsive */
-/* --------------------- */
-@media (max-width: 768px) {
-  section.episode h2 {
-    font-size: 2em;
-  }
-
-  section.episode p {
-    font-size: 1.3em;
-  }
-
-  audio {
-    width: 100%;
-  }
-
-  .logo {
-    width: 100%;
-    height: auto;
-  }
+    width: calc(100% - 30px); /* Ajusta si es necesario */
 }
